@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--TODO 1 - Create Bottom Sheet Layout (untuk layout parent bottom sheet mesti diberi ID-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/bottom_sheet_behavior"
+    app:behavior_peekHeight="0dp"
+    app:behavior_hideable="true"
+    android:background="@color/white"
+    android:id="@+id/layout_bottom_sheet">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/white_background">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_select"
+                android:text="@string/select"
+                android:padding="20dp"
+                android:textColor="@color/black"
+                android:layout_toLeftOf="@id/img_cancel"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/img_cancel"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/ic_baseline_cancel_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:id="@+id/divider_view"
+                android:background="@color/grey"
+                android:layout_below="@id/tv_select"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_save"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_baseline_save_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"/>
+
+            <TextView
+                android:text="Save to Phone"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_edit"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_baseline_edit_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"/>
+
+            <TextView
+                android:text="Edit"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_delete"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_baseline_delete_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"/>
+
+            <TextView
+                android:text="Delete"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
